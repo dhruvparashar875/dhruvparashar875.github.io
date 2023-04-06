@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- divinectorweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Color change in every second</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p id="content"><span>DHRUV PARASHER</span> <br /> change</p> 
+
+
+    <script>
+        
+ var colors = ["tomato", "brown", "chartreuse", "chocolate", "cyan", "crimson", "salmon", "green", "gray", "turquoise", "violet", "pink", "fuchsia", "gold", "indigo", "khaki", "lavender", "coral", "deepskyblue", "maroon"];
+var index = 0;
+
+function changeColor() {
+	var randomIndex = Math.floor(Math.random() * colors.length);
+	var color = colors[randomIndex];
+	document.getElementById("content").style.color = color;
+}
+setInterval(function() {
+	changeColor();
+}, 1000);      
+
+    </script>
+</body>
+</html>
